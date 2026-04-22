@@ -1,0 +1,1230 @@
+@charset "utf-8";
+
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+em,
+img,
+small,
+strong,
+b,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tr,
+th,
+td,
+article,
+aside,
+footer,
+header,
+nav,
+section,
+summary,
+video,
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* 불릿 기호 없애기 */
+ul,
+ol {
+    list-style: none;
+}
+
+/* a 태그 초기화 */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 기본 꾸미기 */
+body {
+    font-family: 'NanumSquareRound';
+    font-size: 12px;
+    line-height: 1.5;
+    color: #3D3E3E;
+}
+
+#wrap {
+    width: 100%;
+    background-color: #F3EEE4;
+}
+
+/* header영역 - 높이를 유지하고 내용을 가운데 정렬 */
+#header {
+    width: 100%;
+    height: 60px;
+    /* 헤더의 실제 높이 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-color: #F3EEE4;
+    display: flex;
+    align-items: center;
+    /* 세로 중앙 정렬 */
+}
+
+
+#header.header_scrolled {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* 2. 내부 컨테이너 - 양 끝 정렬의 핵심 */
+.inner_header {
+    display: flex;
+    width: 1320px;
+    margin: 10px auto;
+    justify-content: space-between;
+    /* 로고는 왼쪽 끝, 메뉴는 오른쪽 끝으로 밀어냄 */
+
+}
+
+.logo {
+    width: 152px;
+    height: 45px;
+    margin: 0;
+}
+
+.gnb {
+    display: flex;
+    margin: 10px 0;
+}
+
+/* banner영역 */
+/* 4. 배너 영역 - 최상단부터 배너 시작점까지 220px 확보 */
+#slider_banner {
+    padding-top: 220px;
+    /* 요청하신 대로 220px 설정 */
+    background-color: #F3EEE4;
+}
+
+.gnb li a {
+    font-weight: 800;
+    font-size: 18px;
+    margin: 0 70px;
+    white-space: nowrap;
+}
+
+.gnb li:last-child a {
+    margin-right: 34px;
+}
+
+.gnb li a:hover {
+    color: #d2cec1;
+}
+
+ul li {
+    display: flex;
+}
+
+
+#slider_banner .swiper {
+    width: 100%;
+    height: 620px;
+}
+
+#slider_banner .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#slider_banner .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 화살표 버튼 수정 */
+#slider_banner .swiper-button-next,
+#slider_banner .swiper-button-prev {
+    color: #3D3E3E;
+    margin: 0 95px;
+}
+
+#slider_banner .swiper-button-next:hover,
+#slider_banner .swiper-button-prev:hover {
+    color: #8a9aab;
+}
+
+/* 선택 안 된 불렛 기호(pagination) */
+#slider_banner .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+}
+
+/* 선택된 불렛 기호(pagination) */
+#slider_banner .swiper-pagination-bullet-active {
+    background-color: #3D3E3E;
+    ;
+}
+
+/* 제품소개영역 */
+.section {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0;
+}
+
+#product_info {
+    color: #8597ab;
+    font-weight: 800;
+    overflow: hidden;
+}
+
+#product_info h2 {
+    font-size: 40px;
+    text-align: center;
+    padding-top: 100px;
+    /* 적당한 여백 */
+    padding-bottom: 60px;
+}
+
+#section1 .img_wrap img,
+#section2 .img_wrap img,
+#section3 .img_wrap img,
+#section4 .img_wrap img,
+#section5 .img_wrap img {
+    width: 960px;
+    height: 400px;
+    object-fit: cover;
+}
+
+
+#section1 .text_wrap,
+#section2 .text_wrap,
+#section3 .text_wrap,
+#section4 .text_wrap,
+#section5 .text_wrap {
+    width: 960px;
+    height: 400px;
+}
+
+.text_wrap {
+
+    display: flex;
+    /* Flex 적용 */
+    flex-direction: column;
+    /* 자식들을 세로로 나열 */
+    justify-content: center;
+    /* 세로 기준 가운데 정렬 */
+    align-items: center;
+    /* 가로 기준 가운데 정렬 */
+}
+
+.text_wrap h3 {
+    text-align: center;
+    font-size: 24px;
+    color: #3D3E3E;
+}
+
+.text_wrap p.title {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 20px;
+    font-weight: 300;
+    color: #8597A8;
+    position: relative;
+}
+
+.text_wrap p.title::after {
+    display: block;
+    content: "";
+
+    width: 100%;
+    height: 5px;
+    background-color: #8597A8;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+.text_wrap p.text {
+    color: #3D3E3E;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.text_wrap p.info {
+    color: #3D3E3E;
+    font-size: 16px;
+    padding: 0px;
+    text-align: left;
+    font-weight: 500;
+}
+
+#section1 .text_wrap p.info,
+#section2 .text_wrap p.info,
+#section3 .text_wrap p.info,
+#section4 .text_wrap p.info,
+#section5 .text_wrap p.info {
+    text-align: center;
+}
+
+/* 1, 3, 5번째 섹션의 이미지 박스 설정 */
+#section1 .img_wrap,
+#section3 .img_wrap,
+#section5 .img_wrap {
+    border-radius: 0 20px 20px 0;
+    /* 상좌, 상우, 하우, 하좌 순서 */
+    overflow: hidden;
+    /* 자식 요소인 이미지가 넘치지 않게 깎아냄 */
+}
+
+/* 이미지 자체에도 곡선을 적용 (더 확실한 방법) */
+#section1 .img_wrap img,
+#section3 .img_wrap img,
+#section5 .img_wrap img {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* 2,4번째 섹션의 이미지 박스 설정 */
+#section2 .img_wrap,
+#section4 .img_wrap {
+    border-radius: 20px 0 0 20px;
+    /* 상좌, 상우, 하우, 하좌 순서 */
+    overflow: hidden;
+    /* 자식 요소인 이미지가 넘치지 않게 깎아냄 */
+}
+
+/* 이미지 자체에도 곡선을 적용 (더 확실한 방법) */
+#section2 .img_wrap img,
+#section4 .img_wrap img {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+
+#brand_info {
+    color: #8597A8;
+    background-color: #f5f5f5;
+    height: 1920px;
+}
+
+#brand_info p {
+    padding-top: 50px;
+    color: #8597ab;
+    font-weight: 800;
+}
+
+
+#brand_info h2 {
+    font-size: 40px;
+    text-align: center;
+    padding: 60px 0;
+}
+
+
+#brand_box {
+    border-radius: 20px;
+    background-color: #fff;
+    width: 1200px;
+    height: 600px;
+    display: flex;
+    margin: 0 auto;
+
+    display: flex;
+    /* Flex 적용 */
+    justify-content: center;
+    /* 2. 가로(수평) 가운데 정렬 */
+    flex-direction: column;
+    box-shadow: 0 0 10px #8597ab;
+}
+
+#brand_box .text_wrap {
+    width: 100%;
+    height: 30px;
+
+}
+
+#brand_box .text_wrap h3 {
+    font-size: 30px;
+    text-align: center;
+}
+
+#brand_box .img_wrap {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 50px 0;
+}
+
+#brand_box .img_wrap img {
+    width: 200px;
+}
+
+#brand_box .text_wrap p.icon_title {
+    font-family: "Expletus Sans", sans-serif;
+    font-size: 24px;
+    color: #f5f5f5;
+    font-weight: 600;
+
+}
+
+#brand_box .text_wrap p.icon_sub_title {
+    font-size: 16px;
+    color: #f5f5f5;
+
+}
+
+/* 1. p 태그 기본 여백 초기화 (brand_box 내부만) */
+#brand_box p {
+    padding: 0;
+    margin: 0;
+}
+
+/* 2. 원형과 텍스트를 감싸는 아이템 단위 */
+.icon_item {
+    display: flex;
+    flex-direction: column;
+    /* 세로로 나열 (원 아래 텍스트) */
+    align-items: center;
+    /* 가로 중앙 정렬 */
+    gap: 25px;
+    /* 원형과 글자 사이의 간격 */
+}
+
+/* 3. 원형 박스 설정 */
+.icon_shape {
+    width: 205px;
+    height: 205px;
+    border-radius: 50%;
+    background-color: #8597ab;
+    display: flex;
+    /* 내부 이미지를 중앙에 놓기 위함 */
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.icon_shape img {
+    width: 100px;
+    /* 아이콘 크기에 맞게 조절 */
+    margin-bottom: 50px;
+}
+
+#icon_wrap {
+    display: flex;
+    justify-content: center;
+    gap: 160px;
+    padding-top: 10px;
+    position: relative;
+}
+
+/* 4. 텍스트 영역 스타일 */
+.icon_description {
+    text-align: center;
+    font-size: 24px;
+    margin-top: -40px;
+}
+
+.icon_title {
+    font-family: "Expletus Sans", sans-serif;
+    font-size: 24px;
+    color: #f5f5f5 !important;
+    font-weight: 600;
+    margin-bottom: 8px;
+    /* 타이틀과 서브타이틀 사이 간격 */
+}
+
+.icon_sub_title {
+    font-size: 16px;
+    color: #f5f5f5 !important;
+    /* 서브 타이틀 색상 */
+    font-weight: 300;
+}
+
+/* 5. 플러스 기호 위치 조정 */
+.plus_wrap {
+    display: flex;
+    align-items: center;
+}
+
+#brand_value_box {
+    margin-top: 30px;
+}
+
+#brand_value_box h3 {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 45px;
+    color: #3D3E3E;
+}
+
+#value_wrap {
+    display: flex;
+    width: 1200px;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.brand_value {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 50px auto;
+    width: 380px;
+    height: 200px;
+    background-color: #fff;
+    box-shadow: 0 0 10px #8597ab;
+    border-radius: 20px;
+    position: relative;
+}
+
+#brand_value_box .brand_wrap {
+    width: 380px;
+    height: 190px;
+}
+
+#brand_value_box .brand_wrap h3 {
+    font-size: 24px;
+    padding-top: 10px;
+    /* 기존 h3에 들어간 패딩이 있다면 초기화가 필요할 수 있음 */
+    color: #8597A8;
+    font-weight: 800;
+}
+
+/* 선택자를 공백으로 간단하게 */
+#brand_value_box .brand_wrap div {
+    width: 185px;
+    border: 3px solid #D5DEE8;
+    margin: 10px auto;
+    /* 위아래 간격 20px, 좌우는 알아서(auto) 중앙 정렬 */
+}
+
+#brand_value_box .brand_wrap p {
+    font-size: 16px;
+    color: #3D3E3E;
+    font-weight: 500;
+    padding-top: 10px;
+    text-align: center;
+}
+
+
+
+
+
+/* 1. 이미지 밖으로 나온 글자 스타일 */
+.convert_title {
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 50px;
+    /* 아래 이미지 박스와의 간격 */
+    font-weight: 800;
+    color: #3D3E3E;
+    /* 브랜드 소개와 같은 색상으로 맞춤 */
+}
+
+/* 2. 이미지 박스 */
+#brand_cov_text_wrap {
+    background-image: url("../images/conv_banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* 이미지가 꽉 차게 설정 */
+    background-position: center;
+    width: 1200px;
+    height: 500px;
+    margin: 0 auto;
+    border-radius: 20px;
+    /* 이미지 모서리 둥글게 (선택사항) */
+    position: relative;
+    /* 자식들의 기준점 */
+    overflow: hidden;
+}
+
+#convert_temp {
+    margin-top: 30px;
+}
+
+#convert_temp h3 {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 45px;
+    margin-bottom: 30px;
+    color: #3D3E3E;
+}
+
+/* 개별 박스 공통 설정 */
+.brand_cov {
+    position: absolute;
+    /* transition을 주면 나중에 마우스 올렸을 때 효과 주기도 좋습니다 */
+    transition: all 0.3s;
+}
+
+/* 3. 텍스트 이미지 박스 위치 (배경 속 텀블러 위치에 맞게 조정) */
+.brand_cov.cold {
+    position: absolute;
+    bottom: 50px;
+    left: 100px;
+}
+
+.brand_cov.hot {
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
+}
+
+/* 모션이름 : banner */
+@keyframes banner {
+    16% {
+        background-image: url(../images/brand_moodboard_1.png);
+    }
+
+    33% {
+        background-image: url(../images/brand_moodboard_2.png);
+    }
+
+    50% {
+        background-image: url(../images/brand_moodboard_3.png);
+    }
+
+    66% {
+        background-image: url(../images/brand_moodboard_4.png);
+    }
+
+    83% {
+        background-image: url(../images/brand_moodboard_5.png);
+    }
+
+    100% {
+        background-image: url(../images/brand_moodboard_1.png);
+    }
+}
+
+#product_img {
+    height: 1000px;
+    width: 100%;
+    background-image: url(../images/brand_moodboard_1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    /* 애니메이션 적용 */
+    animation: banner 15s infinite;
+    overflow: hidden;
+
+}
+
+
+.product_filter {
+    background: rgba(133, 151, 168, 0.7);
+    height: 100%;
+    position: relative;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+
+}
+
+.product_filter h2 {
+    font-size: 40px;
+    text-align: center;
+    color: #f5f5f5;
+    font-weight: 800;
+    padding-top: 65px;
+}
+
+.filter_wrap {
+    position: absolute;
+}
+
+#product_wrap {
+    display: flex;
+    margin: 65px auto;
+    gap: 90px;
+}
+
+.product_item_wrap {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    background-color: #f5f5f5;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.product_item_wrap:hover {
+    background-color: #d2cec1;
+    cursor: pointer;
+
+}
+
+.product_icon_wrap {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product_text_wrap {
+    display: flex;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.product_img_wrap {
+    width: 300px;
+    height: 300px;
+}
+
+.product_img_wrap img {
+    width: 300px;
+    height: 300px;
+}
+
+/* tab 영역 수정 */
+
+/* 1. 탭 버튼 컨테이너 (#box1 대신 #product_wrap 사용) */
+#product_wrap {
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    /* 버튼 사이 간격 */
+    margin: 65px auto;
+}
+
+
+/* 3. 활성화된 탭 버튼 스타일 (.opacity 클래스) */
+.product_item_wrap.opacity {
+    background-color: #D5DEE8;
+    /* 브랜드 포인트 컬러 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product_item_wrap.opacity .product_text_wrap p {
+    color: #fff;
+    /* 활성화 시 글자색 변경 */
+}
+
+
+/* 5. 콘텐츠 영역 (이미지들이 담긴 박스) */
+.box1_1 {
+    display: none;
+    /* 기본적으로 모든 박스 숨김 */
+    width: 1320px;
+    /* 전체 너비 조절 */
+    margin: 0 auto;
+    padding: 40px 0;
+    flex-wrap: wrap;
+    /* 이미지가 많으면 다음 줄로 넘김 */
+    justify-content: center;
+    gap: 20px;
+}
+
+/* 6. JS에서 호출될 때 보여주기 위한 설정 */
+.box1_1.board {
+    /* script.js에서 display: block 또는 flex로 변경됨 */
+}
+
+/* 7. 이미지 박스 세부 스타일 */
+.product_img_wrap {
+    width: 200px;
+    height: 185px;
+    border-radius: 40px 0;
+    overflow: hidden;
+}
+
+.product_img_wrap img {
+    width: 100%;
+    height: 100%;
+    border-radius: 40px 0;
+    object-fit: cover;
+}
+
+.product_util_wrap {
+    position: relative;
+    width: 200px;
+    height: 350px;
+    border-radius: 40px 0 20px 20px;
+    background-color: #D5DEE8;
+}
+
+.product_util_wrap .text_wrap {
+    width: 180px;
+    margin: 0 10px;
+}
+
+span.product_item_text,
+span.product_dis,
+span.product_disp_price {
+    font-weight: 800;
+    font-size: 13px;
+}
+
+.heart {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    padding-top: 12px;
+    padding-bottom: 5px;
+    padding-left: 170px;
+}
+
+.heart img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 기본 상태 */
+.heart_on {
+    display: none;
+}
+
+/* 활성화 상태 */
+.heart.active .heart_on {
+    display: block;
+}
+
+.heart.active .heart_off {
+    display: none;
+}
+
+#shopping_btn {
+    display: flex;
+    margin-top: 20px;
+    gap: 17px;
+}
+
+#shopping_btn button {
+    width: 80px;
+    height: 22px;
+    border-radius: 11px;
+    border: 1px solid #8597A8;
+    background: transparent;
+}
+
+#shopping_btn button:hover {
+    color: #f5f5f5;
+    background-color: #8597A8;
+    cursor: pointer;
+}
+
+#method {
+    width: 100%;
+    height: 1000px;
+    background-color: #F3EEE4;
+}
+
+.tumbler_wrap {
+    display: flex;
+    width: 100%;
+
+}
+
+.inner_tumbler_wrap {
+    display: flex;
+    justify-content: center;
+    width: 1320px;
+    padding: 100px 0 40px 0;
+    margin: 0 auto;
+    gap: 30px;
+
+}
+
+.inner_tumbler_wrap img {
+    width: 230px;
+}
+
+.inner_tumbler_wrap h2 {
+    font-size: 40px;
+    font-weight: 800;
+    padding-top: 85px;
+}
+
+#total_card_wrap {
+    display: flex;
+    width: 1320px;
+    gap: 60px;
+    margin: 0 auto;
+}
+
+#total_card_wrap .method_card:first-child,
+#total_card_wrap .method_card:nth-child(2),
+#total_card_wrap .method_card:last-child {
+    width: 400px;
+    height: 550px;
+    background-color: #D5DEE8;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #8597ab;
+
+}
+
+p.tumbler_title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800;
+    margin-top: 32px;
+}
+
+#total_card_wrap .method_card:first-child .method_img,
+#total_card_wrap .method_card:last-child .method_img {
+    width: 370px;
+    height: 210px;
+    display: flex;
+    margin: 30px auto;
+    border-radius: 20px;
+
+}
+
+#total_card_wrap .method_card:first-child .method_img img,
+#total_card_wrap .method_card:last-child .method_img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: 4px solid #8597A8;
+
+}
+
+#total_card_wrap .method_card:nth-child(2) {
+    position: relative;
+}
+
+#total_card_wrap .method_card:nth-child(2) .method_img1 {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    z-index: 100;
+    width: 200px;
+}
+
+#total_card_wrap .method_card:nth-child(2) .method_img1 img {
+    width: 200px;
+    border-radius: 20px;
+    border: 4px solid #8597A8;
+}
+
+#total_card_wrap .method_card:nth-child(2) .dirction1 {
+    position: absolute;
+    right: 61%;
+    top: 22%;
+    z-index: 101;
+
+}
+
+#total_card_wrap .method_card:nth-child(2) .method_img2 {
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    z-index: 99;
+    width: 200px;
+}
+
+#total_card_wrap .method_card:nth-child(2) .dirction2 {
+    position: absolute;
+    top: 42%;
+    right: 25%;
+    z-index: 101;
+
+}
+
+#total_card_wrap .method_card:nth-child(2) .method_img2 img {
+    width: 200px;
+    border-radius: 20px;
+    border: 4px solid #8597A8;
+}
+
+#total_card_wrap .method_card .method_text {
+    display: flex;
+    width: 350px;
+    margin: 0 auto;
+
+}
+
+#total_card_wrap .method_card .method_text p {
+    width: 100%;
+    font-size: 16px;
+    text-align: left;
+}
+
+#total_card_wrap .method_card:first-child .method_text,
+#total_card_wrap .method_card:last-child .method_text {
+    padding-top: 30px;
+
+}
+
+#total_card_wrap .method_card:nth-child(2) .method_text {
+    padding-top: 300px;
+}
+
+#review {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 1000px;
+    background: url(../images/review_total.png) no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+#review h2 {
+    font-size: 40px;
+    color: #f5f5f5;
+    margin-left: 268px;
+
+}
+
+.container {
+    overflow: hidden;
+}
+
+.solution {
+    width: 1020px;
+    margin: 0 30px 0 auto;
+}
+
+.solution-item ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+/* 위로 흐름 */
+.marquee-up {
+    animation: marqueeUp 20s linear infinite;
+}
+
+/* 아래로 흐름 */
+.marquee-down {
+    animation: marqueeDown 20s linear infinite;
+}
+
+@keyframes marqueeUp {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(var(--move));
+    }
+}
+
+@keyframes marqueeDown {
+    0% {
+        transform: translateY(var(--move));
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.item-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.img-bx {
+    width: 400px;
+    height: 440px;
+    position: relative;
+
+}
+
+.img-bx img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.img-bx .cover {
+    width: 100%;
+    height: 100%;
+    background-color: #8597A8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 40px;
+
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.item-bx:hover .cover {
+    opacity: 0.8;
+}
+
+.img-bx .cover p {
+    font-size: 20px;
+    color: #f5f5f5;
+    font-weight: 600;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.review_text {
+    width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    color: #f5f5f5;
+    font-size: 16px;
+
+}
+
+#event {
+    width: 100%;
+    height: 1060px;
+    background-color: #D5DEE8;
+    padding-top: 60px;
+
+
+}
+
+#thin_banner_flow {
+    height: 30px;
+    background-color: #8597A8;
+    color: lightgoldenrodyellow;
+    overflow: hidden;
+
+}
+
+/* 모션이름 : track */
+@keyframes flow {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+#thin_banner_flow p {
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.track {
+    display: flex;
+    width: max-content;
+    animation: flow 15s linear infinite;
+}
+
+.inner_event_banner {
+    width: 1320px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.inner_event_banner h2 {
+    font-size: 40px;
+    margin: 0 auto;
+}
+
+.total_event_banner {
+    display: flex;
+    margin: 45px auto;
+    gap: 130px;
+}
+
+.oneline_event h3,
+.offline_event h3 {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.oneline_event .img_wrap,
+.offline_event .img_wrap {
+    border-radius: 50px;
+}
+
+.oneline_event .img_wrap img,
+.offline_event .img_wrap img {
+    border-radius: 50px;
+}
+
+#footer {
+    width: 100%;
+    height: 220px;
+    background-color: #3D3E3E;
+}
+
+.inner_footer {
+    width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+#footer .brand_wrap {
+    display: flex;
+    width: 70px;
+}
+
+#footer .brand_wrap img {
+    margin: 80px auto;
+}
+
+
+#footer .link_wrap {
+    display: flex;
+    padding-top: 80px;
+}
+
+#footer .link_wrap ul.link {
+    width: 100px;
+    text-align: center;
+
+}
+
+#footer .link_wrap ul.link li a {
+    color: #f5f5f5;
+    display: block;
+    margin: 5px auto;
+}
+
+#footer .link_wrap ul.link li a:hover {
+    color: #d2cec1;
+}
