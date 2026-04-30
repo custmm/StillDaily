@@ -30,7 +30,7 @@
         <div id="header">
             <div class="inner_header">
                 <h1 class="logo">
-                    <a href="#header"><img src="images/icon/brand_icon1.svg" alt="main_logo"></a>
+                    <img src="images/icon/brand_icon1.svg" alt="main_logo">
                 </h1>
 
                 <ul class="gnb">
@@ -178,7 +178,7 @@
                 </div>
 
                 <div id="icon_wrap">
-                    <div class="icon_item"  data-aos="fade-right" data-aos-duration="1000">
+                    <div class="icon_item" data-aos="fade-right" data-aos-duration="1000">
                         <div class="icon_shape">
                             <img src="images/icon/still_icon.svg" alt="icon1">
                             <div class="icon_description">
@@ -265,7 +265,8 @@
             <div class="product_filter">
                 <h2>제품이미지</h2>
                 <ul id="product_wrap">
-                    <li class="product_item_wrap tablink opacity" onclick="openBoard(event,'product01')" data-aos="fade-right">
+                    <li class="product_item_wrap tablink opacity" onclick="openBoard(event,'product01')"
+                        data-aos="fade-right">
                         <div class="product_icon_wrap ">
                             <img src="images/icon/tumbler_icon1.svg" alt="tumbler_icon1">
                         </div>
@@ -973,13 +974,13 @@
 
                 <div class="inner_tumbler_wrap">
                     <div class="icon_wrap" data-aos="fade-right" data-aos-duration="1000">
-                       <img src="images/icon/tumbler_method.svg" alt="tumbler_all"> 
+                        <img src="images/icon/tumbler_method.svg" alt="tumbler_all">
                     </div>
-                    
+
                     <div class="text_wrap" data-aos="fade-left" data-aos-duration="2000">
-                       <h2>관리방법</h2> 
+                        <h2>관리방법</h2>
                     </div>
-                    
+
                 </div>
             </div>
 
@@ -1294,6 +1295,13 @@
             mousewheel: true,
             keyboard: true,
         });
+
+        $(".logo").click(function () {
+            $("html, body").animate({
+                scrollTop: '0'
+            }, 1000);
+        });
+
 
         // 윈도우 스크롤 시 실행
         $(window).scroll(function () {
