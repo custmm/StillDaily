@@ -1114,40 +1114,6 @@ p.tumbler_title {
     height: 1060px;
     background-color: #D5DEE8;
     padding-top: 60px;
-
-
-}
-
-#thin_banner_flow {
-    height: 30px;
-    background-color: #8597A8;
-    color: lightgoldenrodyellow;
-    overflow: hidden;
-
-}
-
-/* 모션이름 : track */
-@keyframes flow {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-
-#thin_banner_flow p {
-    font-size: 20px;
-    font-weight: bold;
-    white-space: nowrap;
-}
-
-.track {
-    display: flex;
-    width: max-content;
-    animation: flow 15s linear infinite;
 }
 
 .inner_event_banner {
