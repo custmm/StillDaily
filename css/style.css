@@ -49,7 +49,7 @@ video,
 }
 
 *{
-    cursor: url('../images/icon/tumbler_method.svg'), auto !important;
+    cursor: url('../images/icon/pointer.svg'), auto !important;
 }
 
 /* 불릿 기호 없애기 */
@@ -139,7 +139,6 @@ body {
 
 .gnb li a:hover {
     color: #d2cec1;
-    cursor: url('../images/icon/tumbler_method_active.svg'), auto !important;
 }
 
 ul li {
@@ -178,7 +177,6 @@ ul li {
 #slider_banner .swiper-button-next:hover,
 #slider_banner .swiper-button-prev:hover {
     color: #8a9aab;
-    cursor: url('../images/icon/tumbler_method_active.svg'), auto !important;
 }
 
 /* 선택 안 된 불렛 기호(pagination) */
@@ -683,7 +681,6 @@ ul li {
     border-radius: 20px;
     background-color: #f5f5f5;
     position: relative;
-    cursor: url('../images/icon/tumbler_method.svg'), auto !important;
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -694,7 +691,6 @@ ul li {
 
 .product_item_wrap:hover {
     background-color: #d2cec1;
-    cursor: url('../images/icon/tumbler_method_active.svg'), auto !important;
 
 }
 
@@ -805,7 +801,6 @@ span.product_disp_price {
     display: inline-block;
     width: 17px;
     height: 17px;
-    cursor: url('../images/icon/tumbler_method_active.svg'), auto !important;
     padding-top: 12px;
     padding-bottom: 5px;
     padding-left: 170px;
@@ -847,7 +842,6 @@ span.product_disp_price {
 #shopping_btn button:hover {
     color: #f5f5f5;
     background-color: #8597A8;
-    cursor: url('../images/icon/tumbler_method_active.svg'), auto !important;
 }
 #cardnews{
   height: 840px;
@@ -1224,5 +1218,4 @@ p.tumbler_title {
 
 #footer .link_wrap ul.link li a:hover {
     color: #d2cec1;
-    cursor: url('../images/icon/tumbler_method_active.svg'), auto !important;
 }
