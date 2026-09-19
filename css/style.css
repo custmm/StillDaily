@@ -1226,28 +1226,40 @@ p.tumbler_title {
 
 /* 반응형 */
 @media (max-width: 600px) {
-    #header{
+    #wrap{
+        width: 100%;
+    }
+    #header {
         height: 110px;
+        width: 100%;
+        position: relative;
 
     }
-    .inner_header{
+
+    .inner_header {
         flex-direction: column;
         width: 100%;
     }
-    .inner_header h1{
+
+    .inner_header h1 {
         display: flex;
         justify-content: center;
         height: 48px;
     }
-    .gnb{
+
+    .gnb {
         display: flex;
         justify-content: space-around;
         width: 100%;
     }
-    .gnb li a{
-        font-size: 15px;
-        margin:  10px auto;
 
+    .gnb li a {
+        font-size: 15px;
+        margin: 10px auto;
+
+    }
+    #slider_banner{
+        width: 100%;
     }
 
 
@@ -1259,21 +1271,24 @@ p.tumbler_title {
         width: 100%;
         flex-direction: column;
     }
+
     #section1 .text_wrap,
     #section2 .text_wrap,
     #section3 .text_wrap,
     #section4 .text_wrap,
-    #section5 .text_wrap{
+    #section5 .text_wrap {
         width: 100%;
     }
-        #section1 .text_wrap h3,
+
+    #section1 .text_wrap h3,
     #section2 .text_wrap h3,
     #section3 .text_wrap h3,
     #section4 .text_wrap h3,
-    #section5 .text_wrap h3{
+    #section5 .text_wrap h3 {
         font-size: 18px;
     }
-    #product_info p{
+
+    #product_info p {
         font-size: 22px;
     }
 
@@ -1396,22 +1411,69 @@ p.tumbler_title {
         width: 60px;
 
     }
-    #cardnews{
+
+    #cardnews {
         height: 490px;
     }
-    .swiper-slide video{
+
+    .swiper-slide video {
         width: 100%;
     }
-    .slide{
+
+    .slide {
         height: 360px;
     }
 
 
-    #method {}
+    #method {
+        width: 100%;
+    }
 
-    #review {}
+    .tumbler_wrap {
+        width: 100%;
+    }
 
-    #event {}
+    .inner_tumbler_wrap {
+        display: flex;
+        flex-direction: column;
+    }
 
-    #footer {}
+    .inner_tumbler_wrap img {
+        display: flex;
+        margin: 0 auto;
+        width: 185px;
+    }
+    #total_card_wrap{
+        width: 100%;
+        flex-direction: column;
+        height: 1770px;
+        display: flex;
+        margin: 0 auto;
+    }
+    #review{
+        margin-top: 1250px;
+    }
+    .inner_event_banner{
+        width: 100%;
+    }
+    .total_event_banner{
+        display: flex;
+        flex-direction: column;
+    }
+    .img_wrap img{
+        width: 100%;
+    }
+    #event{
+        height: 1590px;
+    }
+
+    #footer {
+        width: 100%;
+        height: 100%;
+    }
+    .inner_footer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
 }
