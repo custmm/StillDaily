@@ -1,6 +1,32 @@
 // script.js 수정
-// 페이지가 완전히 로드되면 실행
+
+// 1. 상단 프로그레스 바 업데이트 함수
+function updateProgressBar() {
+  const indicator = document.getElementById("indicator");
+  if (!indicator) return;
+
+  // 전체 스크롤 가능한 높이 = 문서 전체 높이 - 뷰포트 높이
+  const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+  
+  if (scrollHeight > 0) {
+    const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+    const progress = (scrollPosition / scrollHeight) * 100;
+    indicator.style.width = progress + "%";
+  } else {
+    indicator.style.width = "0%";
+  }
+}
+
+// 스크롤 및 리사이즈 이벤트 발생 시 프로그레스 바 업데이트
+window.addEventListener("scroll", updateProgressBar);
+window.addEventListener("resize", updateProgressBar);
+
+
+// 2. 페이지가 완전히 로드되면 실행
 window.addEventListener("load", function () {
+
+  // 페이지 로드 시 프로그레스 바 초기 위치 계산
+  updateProgressBar();
 
   // 첫 번째 상품 영역을 강제로 보이게 설정
   document.getElementById('product01').style.display = 'flex';
@@ -73,6 +99,7 @@ function cloneItemWrapsOnce() {
 // 상단 띠배너 무한 반복용 함수
 function infiniteBanner() {
   const track = document.querySelector("#thin_banner_flow .track");
+  if (!track) return;
 
   // 현재 텍스트 내용 저장
   const content = track.innerHTML;
@@ -108,6 +135,9 @@ function openBoard(evt, boardName) {
 
   // 4. 클릭된 버튼에 활성화 클래스 추가
   evt.currentTarget.classList.add("opacity");
+
+  // 탭 변경으로 인해 페이지 전체 높이가 변경될 수 있으므로 프로그레스 바 재계산
+  updateProgressBar();
 }
 
 
