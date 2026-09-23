@@ -77,6 +77,21 @@ body {
     background-color: #F3EEE4;
 }
 
+.progress-container{
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 5px;
+    background: transparent;
+}
+
+.progress-bar{
+    height: 5px;
+    background: #D5DEE8;
+    width: 0%;
+}
+
 /* header영역 - 높이를 유지하고 내용을 가운데 정렬 */
 #header {
     width: 100%;
